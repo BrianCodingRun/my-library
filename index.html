@@ -21,31 +21,47 @@
               <i class="bx bx-search"></i>
             </button>
           </div>
-          <div class="filter-sort__list">
+          <div class="filter-sort">
             <div class="sort-list">
               <h5>Sort by:</h5>
-              <div class="filter-sort__item">
-                <input type="radio" name="sort" id="sort-default" checked />
-                <label for="sort-default">Default</label>
-              </div>
-              <div class="filter-sort__item">
-                <input type="radio" name="sort" id="sort-date" />
-                <label for="sort-date">Date</label>
-              </div>
-              <div class="filter-sort__item">
-                <input type="radio" name="sort" id="sort-title" />
-                <label for="sort-title">Title</label>
+              <div>
+                <div class="sort__item">
+                  <h5>Date:</h5>
+                  <!-- Sort by recent date  -->
+                  <div class="sort-date">
+                    <input
+                      type="radio"
+                      id="sort-date-recent"
+                      name="sort"
+                      checked
+                    />
+                    <label for="sort-date-recent">Recent</label>
+                  </div>
+                  <!-- Sort by oldest date  -->
+                  <div class="sort-date">
+                    <input type="radio" id="sort-oldest" name="sort" />
+                    <label for="sort-oldest">Oldest</label>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="filter-list">
-              <h5>Filter by:</h5>
+              <h5>Filter:</h5>
               <div class="filter-item">
-                <input type="radio" id="filter-default" checked />
-                <label for="filter-default">Default</label>
+                <label for="count-result">Result number</label>
+                <input
+                  type="range"
+                  name="count-result"
+                  id="count-result"
+                  value="12"
+                  min="1"
+                  max="50"
+                />
+                <span id="count-span">50</span>
               </div>
               <div class="filter-item">
-                <input type="radio" id="filter-date" />
-                <label for="filter-date">Date</label>
+                <label for="filter-date">Date:</label>
+                <input type="text" name="filter-date" id="filter-date" />
               </div>
             </div>
           </div>
@@ -82,5 +98,6 @@
         </div>
       </section>
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
