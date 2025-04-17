@@ -3,7 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <title>My Library</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">My Library</div>
+        <div class="filter-search">
+          <div class="search-input">
+            <input type="text" placeholder="Search" />
+            <button class="button-search" aria-label="Search book">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+          <div class="filter-sort__list">
+            <div class="sort-list">
+              <h5>Sort by:</h5>
+              <div class="filter-sort__item">
+                <input type="radio" name="sort" id="sort-default" checked />
+                <label for="sort-default">Default</label>
+              </div>
+              <div class="filter-sort__item">
+                <input type="radio" name="sort" id="sort-date" />
+                <label for="sort-date">Date</label>
+              </div>
+              <div class="filter-sort__item">
+                <input type="radio" name="sort" id="sort-title" />
+                <label for="sort-title">Title</label>
+              </div>
+            </div>
+            <div class="filter-list">
+              <h5>Filter by:</h5>
+              <div class="filter-item">
+                <input type="checkbox" id="filter-default" checked />
+                <label for="filter-default">Default</label>
+              </div>
+              <div class="filter-item">
+                <input type="checkbox" id="filter-date" />
+                <label for="filter-date">Date</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="menu-links">
+          <li>About</li>
+          <li>Contact</li>
+          <li>Help</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="book-section">
+        <h1>My Library</h1>
+        <div class="book-section__grid">
+          <div class="book-card">
+            <div class="book-card__image">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+                alt="book cover"
+              />
+            </div>
+            <div class="book-card__info">
+              <h2>The Great Gatsby</h2>
+              <p>F. Scott Fitzgerald</p>
+              <div class="book-card__rating">
+                <div class="book-card__rating__stars">
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                  <i class="bx bx-star"></i>
+                </div>
+                <span>(4.8/5)</span>
+              </div>
+              <button class="button-read">Read</button>
+              <a href="#" class="button-add">Add to wishlist</a>
+              <a href="#" class="button-buy">Buy</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
