@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -39,11 +40,11 @@
             <div class="filter-list">
               <h5>Filter by:</h5>
               <div class="filter-item">
-                <input type="checkbox" id="filter-default" checked />
+                <input type="radio" id="filter-default" checked />
                 <label for="filter-default">Default</label>
               </div>
               <div class="filter-item">
-                <input type="checkbox" id="filter-date" />
+                <input type="radio" id="filter-date" />
                 <label for="filter-date">Date</label>
               </div>
             </div>
@@ -71,18 +72,11 @@
               <h2>The Great Gatsby</h2>
               <p>F. Scott Fitzgerald</p>
               <div class="book-card__rating">
-                <div class="book-card__rating__stars">
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                  <i class="bx bx-star"></i>
-                </div>
                 <span>(4.8/5)</span>
               </div>
-              <button class="button-read">Read</button>
               <a href="#" class="button-add">Add to wishlist</a>
               <a href="#" class="button-buy">Buy</a>
+              <button class="button-read">Read</button>
             </div>
           </div>
         </div>
