@@ -23,8 +23,7 @@ let books = [];
 // Init value
 let sortValue = "sort-date-recent";
 let filterRange = 9;
-let searchValue = "the lord of the rings";
-let filterValue = 2012;
+let searchValue = "the+lord+of+the+rings";
 
 // Fetching data
 const fetchBooks = async () => {
@@ -46,12 +45,15 @@ fetchBooks();
 
 const updateView = () => {
   cardContainer.innerHTML = "";
-  const copy = [...books];
+  let copy = [...books];
 
   // Sorting
+  let filterValue = filterInputDate.value;
+  if (filterValue) {
+    copy = copy.filter((book) => book.first_publish_year == filterValue);
+  }
   copy
     .filter((book) => book.cover_i)
-    .filter((book) => book.first_publish_year === filterValue)
     .sort((a, b) => {
       if (sortValue === "sort-date-recent") {
         return new Date(b.first_publish_year) - new Date(a.first_publish_year);
@@ -110,6 +112,5 @@ filterRangeValue.addEventListener("input", () => {
 });
 
 filterInputDate.addEventListener("input", () => {
-  filterValue = filterInputDate.value;
   updateView();
 });
